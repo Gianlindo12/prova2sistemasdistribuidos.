@@ -1,1 +1,20 @@
 # prova2sistemasdistribuidos.
+
+
+GIANLUCA RODRIGUES MALACHIAS
+PROFESSORA: SIMONE TATIANE CANTO
+18/11/2026
+
+PROBLEMA A- foi mudada a varialvel "Limite simultaneo"
+
+PROBLEMA B- foi retirada a funão "Return"
+
+PROBLEMA C- nao identifiquei
+
+
+*Analise tecnica*
+    Questao 1- Semáforo: controla quantos pedidos podem ser processados simultaneamente.
+    Questao 2- sincronizar os dados é fundamental para que o servidor réplica tenha informações atualizadas e possa auxiliar o sistema quando o servidor principal apresentar uma falha.
+    Questao 3- A tolerância a falhas é a capacidade de um sistema continuar funcionando mesmo quando um dos seus componentes apresenta problemas. ela é demonstrada quando simulamos a queda do servidor principal, alterando seu estado para offline. O programa identifica que o servidor principal não está disponível e direciona a consulta do estoque para o servidor réplica.
+    Questao 4- O Lock é utilizado para controlar o acesso concorrente aos recursos compartilhados do sistema. No meu programa, ele protege o estoque do servidor principal, impedindo que várias threads alterem a quantidade de produtos simultaneamente.
+    Questao 5-Conclusão: primeiro processar os pedidos, depois atualizar a réplica. Assim, a réplica recebe o estoque atualizado, e não um valor antigo.
